@@ -1,21 +1,31 @@
-# Title
+# AWS como Cloud Provider
 
 ## Status
 
-Qual o status. Valores disponíveis: [Rascunho, Proposto, Aceito, Rejeitado, Obsoleto, Substituído]
+Aceito
 
 ## Contexto
 
-Qual é o problema que estamos enfrentando que está motivando esta decisão ou mudança?
+O Tech Challenge exige que a solução seja implantada em uma cloud. É preciso escolher qual vendor será utilizado para hospedar o cluster Kubernetes, Banco de Dados e Funções Serverless.
 
 ## Discussão e possibilidades
 
-O que foi considerado, quais outras opções foram avaliadas e por que foram rejeitadas?
+Foram avaliados os principais players do mercado: AWS, Azure e Google Cloud (GCP).
+
+Tecnicamente, todos os três são excelentes e atenderiam aos requisitos de arquitetura. No entanto, para o critério de desempate, a AWS saiu na frente pois tem um Free Tier mais generoso, é a plataforma mais utilizada no mercado atualmente, e é a cloud adotada pela FIAP na maioria das aulas.
 
 ## Decisão
 
-Qual é a mudança que estamos propondo e/ou realizando?
+Foi decidido utilizar a Amazon Web Services (AWS) como provedor de nuvem.
 
 ## Consequências
 
-O que se torna mais fácil ou mais difícil de fazer por causa dessa mudança?
+**Positivas:**
+
+* Alinhamento com as aulas da FIAP  .
+* Economia de custos devido ao Free Tier.
+* Facilidade em encontrar documentação e suporte comunitário.
+
+**Negativas:**
+
+* Nenhum ponto negativo identificado para o contexto deste projeto.
