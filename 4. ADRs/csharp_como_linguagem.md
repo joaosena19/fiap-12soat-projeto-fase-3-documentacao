@@ -1,21 +1,33 @@
-# Title
+# C# e Plataforma .NET
 
 ## Status
 
-Qual o status. Valores disponíveis: [Rascunho, Proposto, Aceito, Rejeitado, Obsoleto, Substituído]
+Aceito
 
 ## Contexto
 
-Qual é o problema que estamos enfrentando que está motivando esta decisão ou mudança?
+É preciso definir a linguagem de programação e o framework principal para o desenvolvimento do backend da aplicação. A escolha deve levar em conta a robustez para suportar as regras de negócio, o ecossistema de bibliotecas e a produtividade do desenvolvimento.
 
 ## Discussão e possibilidades
 
-O que foi considerado, quais outras opções foram avaliadas e por que foram rejeitadas?
+Avaliei três opções principais:
+
+1. **C# (.NET):** É uma linguagem robusta, fortemente tipada e padrão de mercado corporativo. Tenho alta familiaridade com ela, o que garante velocidade no desenvolvimento e segurança na implementação de padrões complexos.
+2. **Java:** Tão robusto quanto o C#, porém não tenho conhecimento prévio da linguagem. A curva de aprendizado inviabilizaria a entrega do projeto dentro do prazo.
+3. **Node.js:** Tenho conhecimento, mas para este projeto, que envolve modelagem de domínio rica (DDD), considero o C# mais forte e estruturado devido à sua tipagem estática e recursos de Orientação a Objetos.
 
 ## Decisão
 
-Qual é a mudança que estamos propondo e/ou realizando?
+Foi decidido utilizar C# com a plataforma .NET.
 
 ## Consequências
 
-O que se torna mais fácil ou mais difícil de fazer por causa dessa mudança?
+**Positivas:**
+
+* Alta produtividade devido à minha familiaridade com a stack.
+* Ecossistema maduro (Entity Framework, Visual Studio, NuGet, etc).
+
+**Negativas:**
+
+* As imagens Docker tendem a ser um pouco maiores se comparadas com Node ou Go.
+* Consumo de memória do container pode ser maior do que stacks mais leves.
