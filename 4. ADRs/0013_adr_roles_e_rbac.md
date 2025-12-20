@@ -27,7 +27,7 @@ Foi decidido implementar RBAC com validação de ownership através da classe `A
 
 A classe `Ator` representa o usuário logado e é injetada em todos os casos de uso. Ela contém os IDs (usuário e cliente) e as roles. Os casos de uso utilizam métodos de extensão dessa classe para validar se a ação é permitida antes de executá-la.
 
-Mais detalhes no [documento sobre autorização](../7.%20Autorização/1_autorizacao.md)
+Mais detalhes no [documento sobre autorização](../7.%20Autorização/1_autorizacao.md).
 
 ## Consequências
 

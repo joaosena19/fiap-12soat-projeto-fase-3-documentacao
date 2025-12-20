@@ -1,4 +1,4 @@
-# Estratégia de Deploy: Gatilho Manual (Workflow Dispatch)
+# ADR 0018 - Estratégia de Deploy: Gatilho Manual (Workflow Dispatch)
 
 ## Status
 

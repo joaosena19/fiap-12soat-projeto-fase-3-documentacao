@@ -43,5 +43,5 @@ Eventualmente, clientes e usuários podem estar ligados de forma fraca através 
 É importante que existam essas tabelas "cópia" de `servicos_incluidos` e `itens_incluidos` em vez de associar diretamente com `servicos` e `itens`. Primeiramente, essas entidades são de domínios diferentes (Ordem de Serviço é um domínio próprio, Serviços pertence ao domínio de Cadastros, e Itens ao domínio de Estoque), e além disso a Ordem de Serviço precisa representar um ponto fixo no tempo, ou seja, se o nome ou preço do serviço/item mudar, ele não pode mudar dentro da Ordem de Serviço, ela deve representar o que foi feito naquele momento do tempo.
 
 ---
-Anterior: [Estratégia de Deploy: Gatilho Manual (Workflow Dispatch)](../4.%20ADRs/0018_adr_deploy_via_workflow_dispatch.md)  
+Anterior: [ADR 0018 - Estratégia de Deploy: Gatilho Manual (Workflow Dispatch)](../4.%20ADRs/0018_adr_deploy_via_workflow_dispatch.md)  
 Próximo: [Plano de monitoramento](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md)
