@@ -1,12 +1,73 @@
 # Plano de monitoramento
 
+## Log estruturado na aplicação
+
+A aplicação utiliza a interface **ILogger** do .NET para registrar logs estruturados. Cada um dos UseCases está dentro de uma lógica de try/catch que captura erros tratados e os loga como Information, e erros inesperados são logados como Error.
+
+Exemplo:
+
+```csharp
+    public async Task ExecutarAsync(Ator ator, [... parâmetros do caso de uso ...])
+    {
+        try
+        {
+            [... lógica do caso de uso ...]
+        }
+        catch (DomainException ex)
+        {
+            logger.ComUseCase(this)
+                  .ComAtor(ator)
+                  .ComDomainErrorType(ex)
+                  .LogInformation(ex.LogTemplate, ex.LogArgs);
+
+            presenter.ApresentarErro(ex.Message, ex.ErrorType);
+        }
+        catch (Exception ex)
+        {
+            logger.ComUseCase(this)
+                  .ComAtor(ator)
+                  .LogError(ex, "Erro interno do servidor.");
+
+            presenter.ApresentarErro("Erro interno do servidor.", ErrorType.UnexpectedError);
+        }
+    }
+```
+
+Foram criados **extensions methods** para facilitar a adição de propriedades comuns aos logs, como UseCase, Ator, DomainErrorType, etc.
+
+```csharp
+public static class LoggerExtensions
+{
+    public static IAppLogger ComUseCase(this IAppLogger logger, object useCase)
+    {
+        var useCaseName = useCase.GetType().Name;
+        return logger.ComPropriedade("UseCase", useCaseName);
+    }
+
+    public static IAppLogger ComAtor(this IAppLogger logger, Ator ator)
+    {
+        return logger
+            .ComPropriedade("Ator_UsuarioId", ator.UsuarioId)
+            .ComPropriedade("Ator_ClienteId", ator.ClienteId)
+            .ComPropriedade("Ator_UsuarioRoles", ator.Roles.Select(r => r.ToString()).ToArray());
+    }
+
+    public static IAppLogger ComDomainErrorType(this IAppLogger logger, DomainException ex)
+    {
+        return logger.ComPropriedade("DomainErrorType", ex.ErrorType);
+    }
+}
+```
+
+Assim, todos os logs gerados pela aplicação tem propriedades do Use Case que a gerou, e do usuário que estava executando a ação, e podemos filtrar essas propriedades já que elas são indexadas no New Relic como atributos de fato, e não somente texto.
+
 ## New Relic
 
 O New Relic foi escolhido como plataforma de monitoramento pois é um serviço completo e robusto, que integra facilmente com Kubernetes e AWS, e que tem um plano gratuito generoso que atende completamente o projeto.
 
 Mais detalhes em ADR [todo: linkar adr do new relic]
 
-## Dashboard
+### Dashboard
 
 Este é o dashboard de monitoramento da aplicação no New Relic:
 
@@ -137,3 +198,19 @@ FROM OrdemServicoMudancaStatus
 FACET StatusAnterior 
 SINCE 1 week ago
 ```
+
+### Alertas
+
+Foi criado um alerta no New Relic para monitorar falhas no processamento de Ordens de Serviço. São consideradas falhas apenas erros do tipo 5xx, pois erros 4xx são esperados de acordo com o input do usuário.
+
+O alerta se baseia na seguinte query:
+
+```sql
+SELECT count(*) FROM Log WHERE level = 'ERROR' AND (message LIKE '%OrdemServico%' OR UseCase LIKE '%OrdemServico%')
+```
+
+Ele está configurado para abrir um incidente **Critical** se houver mais de 1 erro por 5 minutos, e **Warning** se houver mais de um erro por 1 minuto.
+
+A alerta gera uma notificação por email.
+
+![Alerta New Relic - Visão Geral](Anexos/alerta_new_relic.png)
