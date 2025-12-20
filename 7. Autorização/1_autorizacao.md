@@ -2,7 +2,7 @@
 
 ## Contexto
 
-Inicialmente o projeto não possuía o conceito de "usuário", a autenticação com a API era feita via Client Credentials (Client ID + Client Secret) e qualquer pessoa com um token válido poderia acessar todos os recursos. Isso foi suficiente para a primeira e segunda fase do Tech Challenge, imaginado um sistema que seria usado apenas dentro da Oficina, em um computador compartilhado pelos funcionários.
+Inicialmente o projeto não possuía o conceito de "usuário", a autenticação com a API era feita via Client Credentials (Client ID + Client Secret) e qualquer pessoa com um token válido poderia acessar todos os recursos. Isso foi suficiente para a primeira e segunda fase do Tech Challenge, imaginando um sistema que seria usado apenas dentro da Oficina, em um computador compartilhado pelos funcionários.
 
 O Tech Challenge 3 teve como requisito autenticação via Function Serverless baseada no CPF do cliente. Isso implicou na necessidade de criar um perfil de usuário e deixar com que o **cliente** acessasse o sistema, algo que não havia sido previsto inicialmente.
 
@@ -18,29 +18,29 @@ Um Cliente pode ser um Usuário, e um Usuário pode ser um Cliente, mas não nec
 
 ### Criação de Usuários
 
-Os usuários são criados através do `CriarUsuarioUseCase`, que está disponível apenas para Administradores. Esse UseCase recebe uma o documento do usuário, suas roles, e uma senha em texto plano que será hasheada com Argon2 e antes de ser armazenada no banco de dados.
+Os usuários são criados através do `CriarUsuarioUseCase`, que está disponível apenas para Administradores. Esse UseCase recebe o documento do usuário, suas roles, e uma senha em texto plano que será hasheada com Argon2 antes de ser armazenada no banco de dados.
 
 ### Roles de Usuário
 
 Os Usuários possuem Roles (perfis) que definem o que eles podem fazer no sistema. As Roles são:
 
 - Administrador: acesso total ao sistema, pode gerenciar usuários, clientes, veículos, ordens de serviço, etc.
-- Cliente: acesso restrito, pode ver e gerenciar apenas seu própria cadastro e visualizar suas ordens de serviço.
+- Cliente: acesso restrito, pode ver e gerenciar apenas seu próprio cadastro e visualizar suas ordens de serviço.
 - Sistema: acesso aos webhooks com autenticação HMAC
 
 ### Ownership
 
 Um usuário Administrador pode acessar e gerenciar qualquer recurso do sistema, porém um usuário Cliente só pode acessar os recursos que pertencem a ele mesmo. Por exemplo, um usuário Cliente autenticado e com token válido não pode simplesmente ter acesso a uma rota de buscar ordem de serviço, senão ele poderia ver as ordens de serviço de qualquer outro cliente.
 
-Isso é implementado através dos extensions methods na classe `Ator`, que podem receber um Aggregate que possui um `ClienteId`, ou então receber um Gateway (repository) para verificar se o recurso pertence ao cliente do usuário autenticado.
+Isso é implementado através dos extension methods na classe `Ator`, que podem receber um Aggregate que possui um `ClienteId`, ou então receber um Gateway (repository) para verificar se o recurso pertence ao cliente do usuário autenticado.
 
 ### Classe Ator
 
 Para implementar a autorização baseada em roles e ownership, foi criada a classe `Ator`, que representa o usuário que está executando a ação. Cada um dos Use Cases recebe uma instância de `Ator` que informa quem está executando a ação, e o Use Case pode então verificar as permissões necessárias.
 
-O Ator tem informações de `UsuarioId`, `ClienteId` (opcional) e uma lista de `Roles`. Cada módulo do sistema implementa extensions methods como `PodeListarClientes` ou `PodeAcessarVeiculo` que encapsulam a lógica de verificar as roles e ownership necessárias para aquela ação.
+O Ator tem informações de `UsuarioId`, `ClienteId` (opcional) e uma lista de `Roles`. Cada módulo do sistema implementa extension methods como `PodeListarClientes` ou `PodeAcessarVeiculo` que encapsulam a lógica de verificar as roles e ownership necessárias para aquela ação.
 
-O uso dentro Use Case fica muito simples e fluente, chamando os métodos de Ator no início do método, por exemplo:
+O uso dentro do Use Case fica muito simples e fluente, chamando os métodos do Ator no início do método, por exemplo:
 
 ```csharp
     public async Task ExecutarAsync(Ator ator, [... parâmetros do caso de uso ...])
@@ -50,7 +50,7 @@ O uso dentro Use Case fica muito simples e fluente, chamando os métodos de Ator
             if (!ator.PodeGerenciarOrdemServico())
                 throw new DomainException("Acesso negado");
 
-        }catch (DomainException ex)
+        } catch (DomainException ex)
         {
             // tratamento de erro
         }

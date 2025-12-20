@@ -21,7 +21,7 @@ Se for sua primeira leitura, siga a navegação "Próximo" ao final de cada arqu
     2. [Deploy do banco de dados](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-banco/blob/main/.github/workflows/deploy.yaml)
     3. [Deploy do Lambda](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda/blob/main/.github/workflows/deploy.yaml)
     4. [Deploy da aplicação](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-aplicacao/blob/main/.github/workflows/deploy.yaml)
-    5. Veja [ADR 0018 - Deploy via workflow_dispatch](../4.%20ADRs/0018_adr_deploy_via_workflow_dispatch)
+    5. Veja [ADR 0018 - Deploy via workflow_dispatch](../4.%20ADRs/0018_adr_deploy_via_workflow_dispatch.md)
 4. API Gateway
     1. [Configuração do API Gateway](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda/tree/main/terraform) no repositório Lambda
     2. [Diagrama de componentes evidenciando API Gateway](../2.%20Diagramas%20de%20Componentes%20(C4)/1_diagrama_de_componentes_c4.md)

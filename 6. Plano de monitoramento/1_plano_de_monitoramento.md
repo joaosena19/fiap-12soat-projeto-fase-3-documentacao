@@ -33,7 +33,7 @@ Exemplo:
     }
 ```
 
-Foram criados **extensions methods** para facilitar a adição de propriedades comuns aos logs, como UseCase, Ator, DomainErrorType, etc.
+Foram criados **extension methods** para facilitar a adição de propriedades comuns aos logs, como UseCase, Ator, DomainErrorType, etc.
 
 ```csharp
 public static class LoggerExtensions
@@ -59,9 +59,9 @@ public static class LoggerExtensions
 }
 ```
 
-Assim, todos os logs gerados pela aplicação tem propriedades do Use Case que a gerou, e do usuário que estava executando a ação, e podemos filtrar essas propriedades já que elas são indexadas no New Relic como atributos de fato, e não somente texto.
+Assim, todos os logs gerados pela aplicação têm propriedades do Use Case que os gerou e do usuário que estava executando a ação, e podemos filtrar essas propriedades já que elas são indexadas no New Relic como atributos de fato, e não somente texto.
 
-Foi adotado o padrão de que todo erro inesperado em um Use Case deve ser logado como Error, e todo erro tratado (DomainException) deve ser logado como Information. A escolha por Information invés de Warning é para evitar poluição com logs de Warning que de fato não são problemas na aplicação, e sim erros do usuário.
+Foi adotado o padrão de que todo erro inesperado em um Use Case deve ser logado como Error, e todo erro tratado (DomainException) deve ser logado como Information. A escolha por Information ao invés de Warning é para evitar poluição com logs de Warning que de fato não são problemas na aplicação, e sim erros do usuário.
 
 ## New Relic
 
@@ -151,7 +151,7 @@ LIMIT 50
 
 #### Top Erros 4xx
 
-Este widget mostra os erros 4xx mais frequentes na aplicação. São erros tratados causados por requisições inválidas dos clientes. É útil para descobrirmos aonde os clientes estão errando e melhorar a usabilidade do sistema.
+Este widget mostra os erros 4xx mais frequentes na aplicação. São erros tratados causados por requisições inválidas dos clientes. É útil para descobrirmos onde os clientes estão errando e melhorar a usabilidade do sistema.
 
 [todo: print do widget quando estiver pronto]
 
@@ -213,6 +213,6 @@ SELECT count(*) FROM Log WHERE level = 'ERROR' AND (message LIKE '%OrdemServico%
 
 Ele está configurado para abrir um incidente **Critical** se houver mais de 1 erro por 5 minutos, e **Warning** se houver mais de um erro por 1 minuto.
 
-A alerta gera uma notificação por email.
+O alerta gera uma notificação por email.
 
 ![Alerta New Relic - Visão Geral](Anexos/alerta_new_relic.png)

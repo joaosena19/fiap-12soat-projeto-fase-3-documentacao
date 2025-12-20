@@ -16,17 +16,17 @@ Foi adotada uma abordagem code-first, mapeando as entidades e delegando para o E
 
 ### Clientes e Usuários
 
-`clientes` possuem um ou mais `veiculos`. Eles são os donos dos veículos e indiretamente podem ser associados à ordens de serviço.
+`clientes` possuem um ou mais `veiculos`. Eles são os donos dos veículos e indiretamente podem ser associados às ordens de serviço.
 
-`usuarios` possuem diversas `roles` através da tabela auxilar `usuarios_roles`. Eles são atores dentro do sistema que realizam ações.
+`usuarios` possuem diversas `roles` através da tabela auxiliar `usuarios_roles`. Eles são atores dentro do sistema que realizam ações.
 
-`clientes` e `usuarios` não estão fisicamente ligados, eles são independentes e podem existir um sem um outro. A necessidade disso é que um cliente pode ser cadastrado no sistema sem ele diretamente acessá-lo (e.g.: atendimento de balcão), e o usuário também não necessariamente é ligado a um cliente, pois pode ser apenas um usuário administrador que gerencia o sistema sem nunca atuar como cliente. 
+`clientes` e `usuarios` não estão fisicamente ligados, eles são independentes e podem existir um sem o outro. A necessidade disso é que um cliente pode ser cadastrado no sistema sem ele diretamente acessá-lo (e.g.: atendimento de balcão), e o usuário também não necessariamente é ligado a um cliente, pois pode ser apenas um usuário administrador que gerencia o sistema sem nunca atuar como cliente. 
 
-Eventualmente, clientes e usuários podem estar ligados de forma fraca com através da propriedade `documento_identificador`.
+Eventualmente, clientes e usuários podem estar ligados de forma fraca através da propriedade `documento_identificador`.
 
 ### Veículos
 
-`veiculos` possuem uma ou mais `ordens_servico`, e estão associados a somente um `clientes`. 
+`veiculos` possuem uma ou mais `ordens_servico`, e estão associados a somente um `cliente`. 
 
 ### Serviços
 
@@ -40,4 +40,4 @@ Eventualmente, clientes e usuários podem estar ligados de forma fraca com atrav
 
 `ordens_servico` estão associadas somente a um `veiculos`, e possuem um ou mais `orcamentos`, um ou mais `servicos_incluidos`, um ou mais `itens_incluidos`. 
 
-É importante que existam essas tabelas "cópia" de `servicos_incluidos` e `itens_incluidos` invés de associar diretamente com `servicos` e `itens`. Primeiramente, essas entidades são de domínios diferentes (Ordem de Serviço é um domínio próprio, Serviços pertence ao domínio de Cadastros, e Itens ao domínio de Estoque), e além disso a Ordem de Serviço precisa representar um ponto fixo no tempo, ou seja, se o nome ou preço do serviço/item mudar, ele não pode mudar dentro da Ordem de Serviço, ela deve representar o que foi feito naquele momento do tempo.
+É importante que existam essas tabelas "cópia" de `servicos_incluidos` e `itens_incluidos` em vez de associar diretamente com `servicos` e `itens`. Primeiramente, essas entidades são de domínios diferentes (Ordem de Serviço é um domínio próprio, Serviços pertence ao domínio de Cadastros, e Itens ao domínio de Estoque), e além disso a Ordem de Serviço precisa representar um ponto fixo no tempo, ou seja, se o nome ou preço do serviço/item mudar, ele não pode mudar dentro da Ordem de Serviço, ela deve representar o que foi feito naquele momento do tempo.

@@ -4,7 +4,7 @@
 
 Acesse pela [documentação Redoc disponível](Anexos/redocly_oficina_mecanica_fase_3.html) (necessário fazer download do arquivo) 
 
-## Swagger OpenAI Json
+## Swagger OpenAPI JSON
 
 Acesso por [definição OpenAPI/Swagger](Anexos/swagger_oficina_mecanica_fase_3.json)
 

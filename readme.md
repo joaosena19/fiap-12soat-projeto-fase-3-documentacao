@@ -12,7 +12,7 @@ Email: joaosenadainese@gmail.com
 
 # Introdução
 
-Este projeto foi realizado como Tech Challange da segunda fase do curso de Pós-Graduação em Software Architecture, ministrado pela FIAP. O objetivo dessa fase é aplicar os conceitos de Monitoramento e Serverless.
+Este projeto foi realizado como Tech Challenge da terceira fase do curso de Pós-Graduação em Software Architecture, ministrado pela FIAP. O objetivo dessa fase é aplicar os conceitos de Monitoramento e Serverless.
 
 Este repositório inteiro é dedicado à documentação do projeto, incluindo diagramas, decisões arquiteturais e instruções de uso.
 

@@ -16,7 +16,7 @@ O sistema é pequeno e simples, então não há nenhuma desvantagem de ser um mo
 
 Outras alternativas seriam completamente serverless ou microsserviços, mas ambos seriam muito mais custosos, mais difíceis de testar e de dar manutenção, sendo que as vantagens que oferecem não fazem sentido neste momento do projeto.
 
-Contudo, como é requisito do Tech Challenge o uso de funções serveless, o fluxo de autenticação usa AWS Lambda. Mais detalhes em [ADR 0011 - Autenticação com AWS Lambda](0011_adr_autenticacao_com_lambda.md).
+Contudo, como é requisito do Tech Challenge o uso de funções serverless, o fluxo de autenticação usa AWS Lambda. Mais detalhes em [ADR 0011 - Autenticação com AWS Lambda](0011_adr_autenticacao_com_lambda.md).
 
 ## Decisão
 

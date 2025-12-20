@@ -10,7 +10,7 @@ O enunciado do Tech Challenge solicita deploy automático. No entanto, em um pro
 
 ## Discussão e possibilidades
 
-Para esta fase, optei por ter fazer o deploy via Workflow Dispatch (gatilho manual no Github), para evitar o transtorno de subir a infraestrutura automaticamente enquanto estou apenas desenvolvendo. Conforme discutido via Discord, essa abordagem foi aprovada. A automação do processo continua existindo: eu não preciso construir imagens Docker, logar na AWS ou rodar comandos do Terraform manualmente na minha máquina. O pipeline faz tudo isso sozinho, a única diferença é que eu preciso dar o "aceite" clicando no botão do GitHub Actions.
+Para esta fase, optei por fazer o deploy via Workflow Dispatch (gatilho manual no Github), para evitar o transtorno de subir a infraestrutura automaticamente enquanto estou apenas desenvolvendo. Conforme discutido via Discord, essa abordagem foi aprovada. A automação do processo continua existindo: eu não preciso construir imagens Docker, logar na AWS ou rodar comandos do Terraform manualmente na minha máquina. O pipeline faz tudo isso sozinho, a única diferença é que eu preciso dar o "aceite" clicando no botão do GitHub Actions.
 
 Essa escolha foi pessoal para melhorar meu fluxo de desenvolvimento, evitando que deploys prematuros quebrem o ambiente que estou usando para testes.
 
