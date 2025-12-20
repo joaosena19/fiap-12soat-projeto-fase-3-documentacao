@@ -29,17 +29,17 @@ Se for sua primeira leitura, siga a navegação "Próximo" ao final de cada arqu
     1. [Repositório do Lambda](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda)
     2. [Código das funções serverless](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda/tree/main/src)
     3. Veja [ADR 0011 - Autenticação com AWS Lambda](../4.%20ADRs/0011_adr_autenticacao_com_lambda.md)
-5. Rotas sensíveis com autenticação via CPF
+6. Rotas sensíveis com autenticação via CPF
     1. Veja [ADR 0013 - Controle de Acesso Baseado em Roles (RBAC)](../4.%20ADRs/0013_adr_roles_e_rbac.md)
     2. [Documento sobre autorização](../7.%20Autorização/1_autorizacao.md)
-6. Banco de Dados gerenciado
+7. Banco de Dados gerenciado
     1. Veja [ADR 0008 - PostgreSQL no Amazon RDS](../4.%20ADRs/0008_adr_banco_de_dados_rds_postgres.md)
     2. [Repositório do banco de dados](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-banco)
-7. Kubernetes
+8. Kubernetes
     1. Veja [ADR 0009 - Kubernetes e HPA](../4.%20ADRs/0009_adr_kubernetes_e_hpa.md)
     2. [Repositório da aplicação, pasta k8s/](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-aplicacao/tree/main/k8s)
     3. [Arquivo oficina-mecanica-hpa.yaml](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-aplicacao/blob/main/k8s/api/oficina-mecanica-hpa.yaml)
-8. Terraform
+9. Terraform
     1. [Repositório da infraestrutura base](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-terraform)
     2. [Repositório do Lambda](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda)
     3. [Repositório do banco de dados](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-banco)
