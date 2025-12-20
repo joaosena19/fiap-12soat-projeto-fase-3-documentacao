@@ -16,10 +16,16 @@ Se for sua primeira leitura, siga a navegação "Próximo" ao final de cada arqu
     2. Veja [ADR 0006 - Separação em Múltiplos Repositórios](../4.%20ADRs/0006_adr_separacao_dos_repositorios.md)
     3. Veja [ADR 0012 - Localização da Infraestrutura do API Gateway](../4.%20ADRs/0012_adr_gateway_e_lambda_no_mesmo_repositorio.md)
 2. Proteções de branch e CI/CD - Veja [ADR 0014 - Proteção de Branches](../4.%20ADRs/0014_adr_protecao_das_branchs.md)
-3. API Gateway
+3. Deploy automatizado
+    1. [Deploy da infraestrutura base](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-terraform/blob/main/.github/workflows/deploy.yaml)
+    2. [Deploy do banco de dados](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-banco/blob/main/.github/workflows/deploy.yaml)
+    3. [Deploy do Lambda](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda/blob/main/.github/workflows/deploy.yaml)
+    4. [Deploy da aplicação](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-aplicacao/blob/main/.github/workflows/deploy.yaml)
+    5. Veja [ADR 0018 - Deploy via workflow_dispatch](../4.%20ADRs/0018_adr_deploy_via_workflow_dispatch)
+4. API Gateway
     1. [Configuração do API Gateway](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda/tree/main/terraform) no repositório Lambda
     2. [Diagrama de componentes evidenciando API Gateway](../2.%20Diagramas%20de%20Componentes%20(C4)/1_diagrama_de_componentes_c4.md)
-4. Serverless Functions
+5. Serverless Functions
     1. [Repositório do Lambda](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda)
     2. [Código das funções serverless](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda/tree/main/src)
     3. Veja [ADR 0011 - Autenticação com AWS Lambda](../4.%20ADRs/0011_adr_autenticacao_com_lambda.md)
@@ -39,19 +45,19 @@ Se for sua primeira leitura, siga a navegação "Próximo" ao final de cada arqu
     3. [Repositório do banco de dados](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-banco)
     4. Veja [ADR 0007 - Terraform como Infrastructure as Code](../4.%20ADRs/0007_adr_terraform_como_iac.md)
     5. Veja [ADR 0012 - Localização da Infraestrutura do API Gateway](../4.%20ADRs/0012_adr_gateway_e_lambda_no_mesmo_repositorio.md)
-9. Monitoramento e Observabilidade
+10. Monitoramento e Observabilidade
     1. Veja [ADR 0015 - Monitoramento com New Relic](../4.%20ADRs/0015_adr_monitoramento_com_new_relic.md)
     2. Veja [ADR 0016 - Nível de Log para Erros de Negócio (4xx)](../4.%20ADRs/0016_adr_erros_tratados_como_log_information.md)
     3. Veja componentes do dashboard em [Plano de monitoramento](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md#dashboard)
     4. Veja alerta em [Plano de monitoramento](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md#alertas)
-10. [Logs estruturados](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md#log-estruturado-na-aplicação)
-11. [Diagrama de Componentes](../2.%20Diagramas%20de%20Componentes%20(C4)/1_diagrama_de_componentes_c4.md)
-12. Diagramas de Sequência
+11. [Logs estruturados](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md#log-estruturado-na-aplicação)
+12. [Diagrama de Componentes](../2.%20Diagramas%20de%20Componentes%20(C4)/1_diagrama_de_componentes_c4.md)
+13. Diagramas de Sequência
     1. [Fluxo de autenticação](../3.%20Diagramas%20de%20Sequência/1_auth.md)
     2. [Fluxo de criação de ordem de serviço](../3.%20Diagramas%20de%20Sequência/2_criacao_os.md)
-13. [RFCs e ADRs](../4.%20ADRs/0001_adr_csharp_como_linguagem.md) - ADRs seguem o modelo de Michael Nygard, com adição de uma seção para discussões, atuando também como RFCs
-14. Justificativa para escolha do banco de dados 
+14. [RFCs e ADRs](../4.%20ADRs/0001_adr_csharp_como_linguagem.md) - ADRs seguem o modelo de Michael Nygard, com adição de uma seção para discussões, atuando também como RFCs
+15. Justificativa para escolha do banco de dados 
     1. Veja [ADR 0008 - PostgreSQL no Amazon RDS](../4.%20ADRs/0008_adr_banco_de_dados_rds_postgres.md)
     2. [Justificativa para escolha do PostgreSQL](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md#escolha-do-banco-de-dados)
-15. [Modelo ER e relacionamentos do banco de dados](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md)
-16. [Documentação da API](../8.%20Endpoints/1_endpoints.md)
+16. [Modelo ER e relacionamentos do banco de dados](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md)
+17. [Documentação da API](../8.%20Endpoints/1_endpoints.md)
