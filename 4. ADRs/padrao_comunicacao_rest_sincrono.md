@@ -1,21 +1,31 @@
-# Title
+# Comunicação REST Síncrona
 
 ## Status
 
-Qual o status. Valores disponíveis: [Rascunho, Proposto, Aceito, Rejeitado, Obsoleto, Substituído]
+Aceito
 
 ## Contexto
 
-Qual é o problema que estamos enfrentando que está motivando esta decisão ou mudança?
+O sistema precisa expor suas funcionalidades (cadastro de clientes, veículos, gestão de OS) para serem consumidas por interfaces web ou outros serviços. Era necessário definir o padrão de arquitetura dessa comunicação.
 
 ## Discussão e possibilidades
 
-O que foi considerado, quais outras opções foram avaliadas e por que foram rejeitadas?
+Sobre o protocolo, a escolha natural foi **REST**. É o padrão absoluto de mercado, a integração com .NET é nativa e é a tecnologia com a qual tenho mais familiaridade. Usar GraphQL ou gRPC traria uma curva de aprendizado que não se justifica para o escopo deste projeto.
+
+Sobre o modelo de comunicação, analisei os casos de uso do sistema, e todos são ações diretas onde o usuário espera um feedback imediato de sucesso ou erro. Não há nenhum processamento pesado que justifique processamento assíncrono.
 
 ## Decisão
 
-Qual é a mudança que estamos propondo e/ou realizando?
+Foi decidido utilizar **API REST com comunicação Síncrona**.
 
 ## Consequências
 
-O que se torna mais fácil ou mais difícil de fazer por causa dessa mudança?
+**Positivas:**
+
+* Simplicidade de implementação e debug.
+* Feedback imediato para o usuário final (ele sabe na hora se o cadastro funcionou).
+* Facilidade de documentar (Swagger/OpenAPI).
+
+**Negativas:**
+
+* Nenhum ponto negativo identificado até o momento.
