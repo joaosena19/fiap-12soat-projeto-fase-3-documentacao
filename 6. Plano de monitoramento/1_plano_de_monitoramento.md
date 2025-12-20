@@ -67,7 +67,7 @@ Foi adotado o padrão de que todo erro inesperado em um Use Case deve ser logado
 
 O New Relic foi escolhido como plataforma de monitoramento pois é um serviço completo e robusto, que integra facilmente com Kubernetes e AWS, e que tem um plano gratuito generoso que atende completamente o projeto.
 
-Mais detalhes em ADR [todo: linkar adr do new relic]
+Mais detalhes em [ADR 0015 - Monitoramento com New Relic](../4.%20ADRs/0015_adr_monitoramento_com_new_relic.md)
 
 ### Dashboard
 

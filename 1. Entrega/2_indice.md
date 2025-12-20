@@ -2,7 +2,7 @@
 
 Este arquivo serve como referência para cada um dos pontos de avaliação do Tech Challenge. Cada termo está linkado para o respectivo arquivo de documentação.
 
-Se for sua primeira leitura, e siga a navegação "Próximo" ao final de cada arquivo.
+Se for sua primeira leitura, siga a navegação "Próximo" ao final de cada arquivo.
 
 ## Pontos de Avaliação
 
@@ -24,10 +24,10 @@ Se for sua primeira leitura, e siga a navegação "Próximo" ao final de cada ar
     2. [Código das funções serverless](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda/tree/main/src)
     3. Veja [ADR 0011 - Autenticação com AWS Lambda](../4.%20ADRs/0011_adr_autenticacao_com_lambda.md)
 5. Banco de Dados gerenciado
-    1. [ADR sobre escolha do banco de dados](../4.%20ADRs/0008_adr_banco_de_dados_rds_postgres.md)
+    1. Veja [ADR 0008 - PostgreSQL no Amazon RDS](../4.%20ADRs/0008_adr_banco_de_dados_rds_postgres.md)
     2. [Repositório do banco de dados](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-banco)
 6. Kubernetes
-    1. [ADR sobre Kubernetes](../4.%20ADRs/0009_adr_kubernetes_e_hpa.md)
+    1. Veja [ADR 0009 - Kubernetes e HPA](../4.%20ADRs/0009_adr_kubernetes_e_hpa.md)
     2. [Repositório da aplicação, pasta k8s/](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-aplicacao/tree/main/k8s)
     3. [Arquivo oficina-mecanica-hpa.yaml](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-aplicacao/blob/main/k8s/api/oficina-mecanica-hpa.yaml)
 7. Terraform
@@ -39,7 +39,8 @@ Se for sua primeira leitura, e siga a navegação "Próximo" ao final de cada ar
 8. Monitoramento e Observabilidade
     1. Veja [ADR 0015 - Monitoramento com New Relic](../4.%20ADRs/0015_adr_monitoramento_com_new_relic.md)
     2. Veja [ADR 0016 - Nível de Log para Erros de Negócio (4xx)](../4.%20ADRs/0016_adr_erros_tratados_como_log_information.md)
-    3. [Plano de monitoramento](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md)
+    3. Veja componentes do dashboard em [Plano de monitoramento](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md#dashboard)
+    4. Veja alerta em [Plano de monitoramento](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md#alertas)
 9. [Diagrama de Componentes](../2.%20Diagramas%20de%20Componentes%20(C4)/1_diagrama_de_componentes_c4.md)
 10. Diagramas de Sequência
     1. [Fluxo de autenticação](../3.%20Diagramas%20de%20Sequência/1_auth.md)
@@ -47,6 +48,6 @@ Se for sua primeira leitura, e siga a navegação "Próximo" ao final de cada ar
 11. [RFCs e ADRs](../4.%20ADRs/0001_adr_csharp_como_linguagem.md) - ADRs seguem o modelo de Michael Nygard, com adição de uma seção para discussões, atuando também como RFCs
 12. Justificativa para escolha do banco de dados 
     1. Veja [ADR 0008 - PostgreSQL no Amazon RDS](../4.%20ADRs/0008_adr_banco_de_dados_rds_postgres.md)
-    2. [Justificativa para escolha do PostgreSQL](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md#justificativa-para-escolha-do-postgresql)
+    2. [Justificativa para escolha do PostgreSQL](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md#escolha-do-banco-de-dados)
 13. [Modelo ER e relacionamentos do banco de dados](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md)
 14. [Documentação da API](../8.%20Endpoints/1_endpoints.md)
