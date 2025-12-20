@@ -14,11 +14,10 @@ O enunciado do Tech Challenge trouxe um requisito explícito de que a entrega de
 
 Não houve avaliação de alternativas, pois a separação era uma regra obrigatória para a avaliação do projeto. A solução foi dividida em 4 repositórios conforme o Tech Challenge:
 
-[todo: links para os repositórios]
-1. **fiap-12soat-projeto-fase-3-terraform:** VPC e Cluster EKS.
-2. **fiap-12soat-projeto-fase-3-banco:** RDS PostgreSQL.
-3. **fiap-12soat-projeto-fase-3-lambda:** AWS Lambda e API Gateway.
-4. **fiap-12soat-projeto-fase-3-aplicacao:** API da Oficina (.NET) e Kubernetes.
+1. **[fiap-12soat-projeto-fase-3-terraform](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-terraform):** VPC e Cluster EKS.
+2. **[fiap-12soat-projeto-fase-3-banco](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-banco):** RDS PostgreSQL.
+3. **[fiap-12soat-projeto-fase-3-lambda](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-lambda):** AWS Lambda e API Gateway.
+4. **[fiap-12soat-projeto-fase-3-aplicacao](https://github.com/joaosena19/fiap-12soat-projeto-fase-3-aplicacao):** API da Oficina (.NET) e Kubernetes.
 
 Além deles, foi criado um quinto repositório exclusivo para a documentação (este repositório), para centralizar todas as informações.
 
