@@ -61,3 +61,7 @@ Se for sua primeira leitura, siga a navegação "Próximo" ao final de cada arqu
     2. [Justificativa para escolha do PostgreSQL](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md#escolha-do-banco-de-dados)
 16. [Modelo ER e relacionamentos do banco de dados](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md)
 17. [Documentação da API](../8.%20Endpoints/1_endpoints.md)
+
+---
+Anterior: [Identificação](1_introducao.md)  
+Próximo: [Diagrama de componentes C4](../2.%20Diagramas%20de%20Componentes%20%28C4%29/1_diagrama_de_componentes_c4.md)

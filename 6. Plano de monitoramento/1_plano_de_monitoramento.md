@@ -216,3 +216,7 @@ Ele está configurado para abrir um incidente **Critical** se houver mais de 1 e
 O alerta gera uma notificação por email.
 
 ![Alerta New Relic - Visão Geral](Anexos/alerta_new_relic.png)
+
+---
+Anterior: [Modelo de banco de dados](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md)  
+Próximo: [Autorização](../7.%20Autoriza%C3%A7%C3%A3o/1_autorizacao.md)

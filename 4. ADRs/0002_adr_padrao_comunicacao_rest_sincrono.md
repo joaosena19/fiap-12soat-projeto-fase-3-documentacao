@@ -29,3 +29,7 @@ Foi decidido utilizar **API REST com comunicação Síncrona**.
 **Negativas:**
 
 * Nenhum ponto negativo identificado até o momento.
+
+---
+Anterior: [ADR 0001 - C# e Plataforma .NET](0001_adr_csharp_como_linguagem.md)  
+Próximo: [ADR 0003 - Arquitetura Monolítica para Aplicação Principal](0003_adr_arquitetura_monolitica.md)

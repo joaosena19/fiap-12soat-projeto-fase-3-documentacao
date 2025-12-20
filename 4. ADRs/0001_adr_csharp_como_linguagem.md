@@ -31,3 +31,7 @@ Foi decidido utilizar C# com a plataforma .NET.
 
 * As imagens Docker tendem a ser um pouco maiores se comparadas com Node ou Go.
 * Consumo de memória do container pode ser maior do que stacks mais leves.
+
+---
+Anterior: [Fluxo de criação de Ordem de Serviço](../3.%20Diagramas%20de%20Sequ%C3%AAncia/2_criacao_os.md)  
+Próximo: [ADR 0002 - Comunicação REST Síncrona](0002_adr_padrao_comunicacao_rest_sincrono.md)

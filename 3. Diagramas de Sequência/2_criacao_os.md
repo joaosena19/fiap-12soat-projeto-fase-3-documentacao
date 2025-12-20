@@ -34,3 +34,7 @@ A criação de uma Ordem de Serviço Completa pode ser chamada diretamente sem a
 ### Diagrama de Sequência
 
 ![Criação de Ordem de Serviço Completa](Anexos/nova_os_completa.svg)
+
+---
+Anterior: [Fluxo de autenticação](1_auth.md)  
+Próximo: [ADR 0001 - C# e Plataforma .NET](../4.%20ADRs/0001_adr_csharp_como_linguagem.md)

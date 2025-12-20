@@ -29,3 +29,7 @@ Foi decidido utilizar a Amazon Web Services (AWS) como provedor de nuvem.
 **Negativas:**
 
 * Nenhum ponto negativo identificado para o contexto deste projeto.
+
+---
+Anterior: [ADR 0004 - Clean Architecture](0004_adr_clean_architecture.md)  
+Próximo: [ADR 0006 - Separação em Múltiplos Repositórios](0006_adr_separacao_dos_repositorios.md)

@@ -29,3 +29,7 @@ Foi decidido utilizar o gatilho `workflow_dispatch` (acionamento manual) para os
 **Negativas:**
 
 * Nenhuma desvantagem real para o escopo deste projeto, já que não há uma equipe grande dependendo de integração contínua imediata.
+
+---
+Anterior: [ADR 0017 - Imutabilidade Histórica de Itens e Serviços na Ordem de Serviço](0017_adr_imutabilidade_temporal_servicos_itens_ordem_servico.md)  
+Próximo: [Modelo de banco de dados](../5.%20Banco%20de%20dados%20e%20modelo%20ER/1_banco_de_dados_modelo_er.md)

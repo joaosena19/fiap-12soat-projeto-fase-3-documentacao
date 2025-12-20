@@ -31,3 +31,7 @@ Foi decidido manter a Clean Architecture iniciada na fase 2.
 **Negativas:**
 
 * Nenhum ponto negativo identificado para o contexto deste projeto.
+
+---
+Anterior: [ADR 0003 - Arquitetura Monolítica para Aplicação Principal](0003_adr_arquitetura_monolitica.md)  
+Próximo: [ADR 0005 - AWS como Cloud Provider](0005_adr_escolha_da_aws_como_cloud.md)

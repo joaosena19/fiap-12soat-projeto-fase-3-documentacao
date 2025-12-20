@@ -34,3 +34,7 @@ Funciona nos seguintes passos:
 ### Diagrama de sequência
 
 ![Fluxo de Autorização](Anexos/autorizacao.svg)
+
+---
+Anterior: [Diagrama de componentes C4](../2.%20Diagramas%20de%20Componentes%20%28C4%29/1_diagrama_de_componentes_c4.md)  
+Próximo: [Fluxo de criação de Ordem de Serviço](2_criacao_os.md)

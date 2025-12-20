@@ -31,3 +31,7 @@ Foi decidido utilizar Terraform para todo o provisionamento de infraestrutura.
 **Negativas:**
 
 * Gestão do `tfstate`. Diferente do CloudFormation, o Terraform exige que a gente cuide do arquivo tfstate e configure um bucket S3 para armazená-lo com segurança e evitar conflitos.
+
+---
+Anterior: [ADR 0006 - Separação em Múltiplos Repositórios](0006_adr_separacao_dos_repositorios.md)  
+Próximo: [ADR 0008 - PostgreSQL no Amazon RDS](0008_adr_banco_de_dados_rds_postgres.md)

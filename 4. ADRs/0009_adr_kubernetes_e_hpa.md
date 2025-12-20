@@ -43,3 +43,7 @@ Foi decidido utilizar **EKS** para a orquestração dos containers e **HPA** par
 
 * Maior complexidade operacional.
 * Custo adicional do control plane do EKS, mas é necessário.
+
+---
+Anterior: [ADR 0008 - PostgreSQL no Amazon RDS](0008_adr_banco_de_dados_rds_postgres.md)  
+Próximo: [ADR 0010 - Estratégia de Segurança Zero Trust](0010_adr_estrategia_seguranca_zero_trust.md)

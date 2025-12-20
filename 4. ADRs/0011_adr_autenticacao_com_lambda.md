@@ -36,3 +36,7 @@ Foi decidido mover toda a camada de autenticação (Login e Validação de Token
 * Maior complexidade de infraestrutura.
 * É necessário manter um pipeline de deploy separado apenas para as Lambdas.
 * Exige uma configuração de monitoramento específica no New Relic, diferente da aplicação principal.
+
+---
+Anterior: [ADR 0010 - Estratégia de Segurança Zero Trust](0010_adr_estrategia_seguranca_zero_trust.md)  
+Próximo: [ADR 0012 - Localização da Infraestrutura do API Gateway](0012_adr_gateway_e_lambda_no_mesmo_repositorio.md)

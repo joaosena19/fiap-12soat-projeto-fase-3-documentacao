@@ -23,3 +23,7 @@ Este é um Diagrama de Componentes que cobre as visões HLD e LLD usando o model
 ### 3° nível - Componentes - API Backend
 
 ![Componente API Backend](Anexos/component_api_backend.svg)
+
+---
+Anterior: [Índice](../1.%20Entrega/2_indice.md)  
+Próximo: [Fluxo de autenticação](../3.%20Diagramas%20de%20Sequ%C3%AAncia/1_auth.md)

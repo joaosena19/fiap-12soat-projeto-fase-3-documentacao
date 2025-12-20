@@ -39,3 +39,7 @@ Dessa forma, o repositório do Lambda consome os dados da Infra Base, provisiona
 **Negativas:**
 
 * **Fragmentação da Infraestrutura:** O API Gateway, fica definido fora do repositório central de infraestrutura.
+
+---
+Anterior: [ADR 0011 - Autenticação com AWS Lambda](0011_adr_autenticacao_com_lambda.md)  
+Próximo: [ADR 0013 - Controle de Acesso Baseado em Roles (RBAC)](0013_adr_roles_e_rbac.md)

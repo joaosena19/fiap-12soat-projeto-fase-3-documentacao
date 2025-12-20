@@ -40,3 +40,7 @@ Mais detalhes no [documento sobre autorização](../7.%20Autorização/1_autoriz
 **Negativas:**
 
 * Aumentou a complexidade do código. Todo Use Case agora exige a injeção do `Ator` e uma etapa de validação.
+
+---
+Anterior: [ADR 0012 - Localização da Infraestrutura do API Gateway](0012_adr_gateway_e_lambda_no_mesmo_repositorio.md)  
+Próximo: [ADR 0014 - Proteção de Branches](0014_adr_protecao_das_branchs.md)

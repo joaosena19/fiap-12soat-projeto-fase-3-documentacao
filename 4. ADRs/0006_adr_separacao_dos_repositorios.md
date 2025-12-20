@@ -35,3 +35,7 @@ Foi decidido manter a estrutura de múltiplos repositórios com um repositório 
 **Negativas:**
 
 * **Complexidade de Integração:** Compartilhar informações entre os repositórios tornou-se mais difícil. Foi necessário usar `terraform_remote_state` e scripts auxiliares nos pipelines para buscar outputs de um repositório para usar no outro (como a aplicação precisando saber o endereço do banco que está em outro repo).
+
+---
+Anterior: [ADR 0005 - AWS como Cloud Provider](0005_adr_escolha_da_aws_como_cloud.md)  
+Próximo: [ADR 0007 - Terraform como Infrastructure as Code](0007_adr_terraform_como_iac.md)

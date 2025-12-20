@@ -71,3 +71,7 @@ Tabelas: `clientes`, `usuarios`, `usuarios_roles`, `roles`
 #### Lambda Login
 
 `\AuthLambda\LoginHandler.cs` -> busca usuário no banco e valida senha, gera token JWT com roles e IDs
+
+---
+Anterior: [Plano de monitoramento](../6.%20Plano%20de%20monitoramento/1_plano_de_monitoramento.md)  
+Próximo: [Documentação API Endpoints](../8.%20Endpoints/1_endpoints.md)

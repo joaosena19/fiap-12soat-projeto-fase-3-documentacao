@@ -34,3 +34,7 @@ Negativas:
 
 - Falha crítica derruba todo o sistema (Single Point of Failure).
 - Escala vertical ou horizontal de toda a aplicação, sem granularidade por módulo (por exemplo, se o fluxo da ordem de serviço for mais usado que o de cadastros, ele não tem como escalar de forma independente).
+
+---
+Anterior: [ADR 0002 - Comunicação REST Síncrona](0002_adr_padrao_comunicacao_rest_sincrono.md)  
+Próximo: [ADR 0004 - Clean Architecture](0004_adr_clean_architecture.md)

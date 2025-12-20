@@ -32,3 +32,7 @@ Ao adicionar um item ou serviço em uma ordem, o sistema não cria apenas um ví
 **Negativas:**
 
 * Duplicação de dados no banco, já que repetimos as strings de nome e descrição para cada ordem de serviço gerada.
+
+---
+Anterior: [ADR 0016 - Nível de Log para Erros de Negócio (4xx)](0016_adr_erros_tratados_como_log_information.md)  
+Próximo: [Estratégia de Deploy: Gatilho Manual (Workflow Dispatch)](0018_adr_deploy_via_workflow_dispatch.md)

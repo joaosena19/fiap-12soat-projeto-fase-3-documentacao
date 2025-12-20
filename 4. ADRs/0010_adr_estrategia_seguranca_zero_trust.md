@@ -27,3 +27,7 @@ Foi decidido aplicar a arquitetura Zero Trust com dupla validação de token no 
 
 * **Aumento da complexidade operacional** A solução exigiu o desenvolvimento e manutenção de uma função Lambda Authorizer adicional especificamente para realizar essa interceptação no Gateway.
 * **Latência adicional** Cada requisição passa por dois processos de validação de token antes de ser processada pela regra de negócio.
+
+---
+Anterior: [ADR 0009 - Kubernetes e HPA](0009_adr_kubernetes_e_hpa.md)  
+Próximo: [ADR 0011 - Autenticação com AWS Lambda](0011_adr_autenticacao_com_lambda.md)

@@ -28,3 +28,7 @@ Foi decidido logar exceções tratadas e erros de client-side (4xx) com o nível
 **Negativas:**
 
 * Pode aumentar o volume de logs disparados se tivermos muitos usuários errando validações, consumindo a cota de ingestão do New Relic mais rápido.
+
+---
+Anterior: [ADR 0015 - Monitoramento com New Relic](0015_adr_monitoramento_com_new_relic.md)  
+Próximo: [ADR 0017 - Imutabilidade Histórica de Itens e Serviços na Ordem de Serviço](0017_adr_imutabilidade_temporal_servicos_itens_ordem_servico.md)
