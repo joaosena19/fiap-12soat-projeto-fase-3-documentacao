@@ -1,4 +1,4 @@
-# Proteção de Branches e Proibição de Push Direto
+# Proteção de Branches
 
 ## Status
 
@@ -9,6 +9,10 @@ Aceito
 A proteção das branches principais contra push direto é um requisito obrigatório do Tech Challenge. Dessa forma, não houve discussão ou avaliação de alternativas para essa decisão.
 
 Adicionalmente, essa prática já vinha sendo adotada desde a Fase 2, como parte do processo padrão de controle de qualidade e governança do código.
+
+## Discussão e possibilidades
+
+Não houve discussão ou avaliação de alternativas, uma vez que a proteção das branches é explicitamente exigida pelo Tech Challenge.
 
 ## Decisão
 
