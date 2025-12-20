@@ -1,21 +1,34 @@
-# Title
+# PostgreSQL no Amazon RDS
 
 ## Status
 
-Qual o status. Valores disponíveis: [Rascunho, Proposto, Aceito, Rejeitado, Obsoleto, Substituído]
+Aceito
 
 ## Contexto
 
-Qual é o problema que estamos enfrentando que está motivando esta decisão ou mudança?
+Como a infraestrutura do projeto está hospedada na AWS, a escolha concentrou-se nos serviços gerenciados disponíveis nesse ecossistema.
+
+Era preciso escolher um banco de dados. O domínio do sistema é relacional, então um banco SQL é a escolha natural.
+
+Além disso, o Tech Challenge estabelece como requisito obrigatório a utilização de um serviço de banco de dados gerenciado, o que inviabiliza a adoção de um banco executando em container ou máquina virtual gerenciada manualmente.
 
 ## Discussão e possibilidades
 
-O que foi considerado, quais outras opções foram avaliadas e por que foram rejeitadas?
+Avaliei o SQL Server, que seria o natural para .NET, mas rejeitei porque é pago. O AWS Aurora também foi cogitado, mas descartei porque ele não está no free tier.
+
+A escolha ficou com o PostgreSQL por ser relacional, robusto e totalmente gratuito. Para a hospedagem, optei pelo Amazon RDS para atender o requisito de serviço gerenciado mas que ainda está dentro do Free Tier da AWS.
 
 ## Decisão
 
-Qual é a mudança que estamos propondo e/ou realizando?
+Foi decidido utilizar o **Amazon RDS com PostgreSQL**.
 
 ## Consequências
 
-O que se torna mais fácil ou mais difícil de fazer por causa dessa mudança?
+**Positivas:**
+
+* Banco gratuito.
+* Atende o requisito de usar serviço gerenciado.
+
+**Negativas:**
+
+* Nenhum ponto negativo identificado até o momento.
