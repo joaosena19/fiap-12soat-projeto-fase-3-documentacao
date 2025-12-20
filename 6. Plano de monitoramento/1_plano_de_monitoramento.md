@@ -61,6 +61,8 @@ public static class LoggerExtensions
 
 Assim, todos os logs gerados pela aplicação tem propriedades do Use Case que a gerou, e do usuário que estava executando a ação, e podemos filtrar essas propriedades já que elas são indexadas no New Relic como atributos de fato, e não somente texto.
 
+Foi adotado o padrão de que todo erro inesperado em um Use Case deve ser logado como Error, e todo erro tratado (DomainException) deve ser logado como Information. A escolha por Information invés de Warning é para evitar poluição com logs de Warning que de fato não são problemas na aplicação, e sim erros do usuário.
+
 ## New Relic
 
 O New Relic foi escolhido como plataforma de monitoramento pois é um serviço completo e robusto, que integra facilmente com Kubernetes e AWS, e que tem um plano gratuito generoso que atende completamente o projeto.
