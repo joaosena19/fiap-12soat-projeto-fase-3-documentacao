@@ -1,0 +1,31 @@
+# Estratégia de Deploy: Gatilho Manual (Workflow Dispatch)
+
+## Status
+
+Aceito
+
+## Contexto
+
+O enunciado do Tech Challenge solicita deploy automático. No entanto, em um projeto acadêmico e individual, um pipeline que realiza deploy a cada PR aprovado pode gerar instabilidade e custos desnecessários, fazendo deploy de código que ainda está sendo testado ou ajustado.
+
+## Discussão e possibilidades
+
+Para esta fase, optei por ter fazer o deploy via Workflow Dispatch (gatilho manual no Github), para evitar o transtorno de subir a infraestrutura automaticamente enquanto estou apenas desenvolvendo. Conforme discutido via Discord, essa abordagem foi aprovada. A automação do processo continua existindo: eu não preciso construir imagens Docker, logar na AWS ou rodar comandos do Terraform manualmente na minha máquina. O pipeline faz tudo isso sozinho, a única diferença é que eu preciso dar o "aceite" clicando no botão do GitHub Actions.
+
+Essa escolha foi pessoal para melhorar meu fluxo de desenvolvimento, evitando que deploys prematuros quebrem o ambiente que estou usando para testes.
+
+## Decisão
+
+Foi decidido utilizar o gatilho `workflow_dispatch` (acionamento manual) para os pipelines de deploy.
+
+## Consequências
+
+**Positivas:**
+
+* **Controle Absoluto:** O deploy só acontece quando eu estou pronto para monitorar o resultado.
+* **Economia de Recursos:** Evita disparar runners do GitHub e atualizações no cluster EKS para mudanças triviais que não precisavam ir para o ar imediatamente.
+* **Automação Mantida:** O processo de build, push e apply continua 100% automatizado via script, eliminando erro humano na execução.
+
+**Negativas:**
+
+* Nenhuma desvantagem real para o escopo deste projeto, já que não há uma equipe grande dependendo de integração contínua imediata.
