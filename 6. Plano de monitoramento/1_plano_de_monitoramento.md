@@ -73,7 +73,7 @@ Mais detalhes em [ADR 0015 - Monitoramento com New Relic](../4.%20ADRs/0015_adr_
 
 Este é o dashboard de monitoramento da aplicação no New Relic:
 
-[todo: print do dashboard completo quando estiver pronto]
+![Dashboard Geral](Anexos/dashboard_geral.png)
 
 ### Widgets
 
@@ -83,7 +83,7 @@ Estes são os widgets que compõem o dashboard:
 
 Monitora a disponibilidade da API através de duas queries, avaliando a taxa de sucesso das requisições e o status do *Readiness Probe* do Kubernetes, indicando se a aplicação está conseguindo atender às requisições.
 
-[todo: print do widget quando estiver pronto]
+![Healthcheck & Uptime](Anexos/health_check_uptime.png)
 
 **Query 1:**
 ```sql
@@ -96,7 +96,7 @@ TIMESERIES
 
 **Query 2:**
 ```sql
-SELECT min(ready) * 100 as 'K8s Readiness Probe' 
+SELECT average(isReady) as 'K8s Readiness Probe' 
 FROM K8sContainerSample 
 WHERE containerName = 'container-oficina-mecanica-api' 
 SINCE 1 hour ago 
@@ -107,7 +107,7 @@ TIMESERIES
 
 Acompanha o consumo percentual de CPU e Memória do container em relação aos limites (limits) definidos no Kubernetes.
 
-[todo: print do widget quando estiver pronto]
+![Recursos K8s](Anexos/recursos_k8s_.png)
 
 **Query:**
 ```sql
@@ -120,11 +120,29 @@ SINCE 1 hour ago
 TIMESERIES
 ```
 
+#### Limite HPA
+
+Monitora a quantidade de pods ativos e o limite configurado no HPA.
+
+![Limite HPA](Anexos/limite_hpa.png)
+
+**Query:**
+```sql
+SELECT 
+  uniqueCount(podName) as 'Pods Ativos',
+  5 as 'Limite HPA'
+FROM K8sPodSample 
+WHERE deploymentName = 'oficina-mecanica-deployment' 
+AND status = 'Running'
+SINCE 1 hour ago 
+TIMESERIES
+```
+
 #### Latência das APIs
 
 Exibe o tempo médio de resposta das transações.
 
-[todo: print do widget quando estiver pronto]
+![Latência das APIs](Anexos/latencia_apis_.png)
 
 **Query:**
 ```sql
@@ -138,13 +156,13 @@ TIMESERIES
 
 Lista os últimos 50 erros e falhas críticos registrados nos logs da aplicação, útil para monitorar erros imediatos.
 
-[todo: print do widget quando estiver pronto]
+![Log de Erros Recentes](Anexos/erros_recentes.png)
 
 **Query:**
 ```sql
 SELECT timestamp, message, UseCase, ErrorType 
 FROM Log 
-WHERE level = 'ERROR' OR level = 'FATAL' 
+WHERE level = 'Error'
 SINCE 1 day ago 
 LIMIT 50
 ```
@@ -153,15 +171,16 @@ LIMIT 50
 
 Este widget mostra os erros 4xx mais frequentes na aplicação. São erros tratados causados por requisições inválidas dos clientes. É útil para descobrirmos onde os clientes estão errando e melhorar a usabilidade do sistema.
 
-[todo: print do widget quando estiver pronto]
+![Top Erros 4xx](Anexos/top_erros_4xx.png)
 
 **Query:**
 ```sql
 SELECT count(*) as 'Ocorrências'
 FROM Log
-WHERE level = 'INFO'
-AND traceId IN (
-  SELECT traceId FROM Transaction WHERE httpResponseCode LIKE '4%'
+WHERE level = 'Information'
+AND trace.id IN (
+  SELECT traceId FROM Transaction WHERE http.statusCode >= 400 AND http.statusCode < 500
+  LIMIT MAX
 )
 FACET message_template
 SINCE 1 week ago
@@ -174,7 +193,7 @@ Contabiliza novas ordens de serviço criadas diariamente, comparando com a seman
 
 É criado na aplicação através do Custom Event `OrdemServicoCriada`.
 
-[todo: print do widget quando estiver pronto]
+![Volume diário de ordens de serviço](Anexos/volume_ordens_servico.png)
 
 **Query:**
 ```sql
@@ -191,7 +210,7 @@ Calcula o tempo médio que uma OS permanece em certos status antes de avançar. 
 
 É criado na aplicação através do Custom Event `OrdemServicoMudancaStatus`.
 
-[todo: print do widget quando estiver pronto]
+![Tempo médio de execução de ordens de serviço por status](Anexos/tempo_medio.png)
 
 **Query:**
 ```sql
