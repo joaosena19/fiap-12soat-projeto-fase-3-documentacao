@@ -6,7 +6,7 @@ Aceito
 
 ## Contexto
 
-É necessário de uma solução de observabilidade para monitorar a aplicação e a infraestrutura. O Tech Challenge trouxe um requisito a escolha entre New Relic ou Datadog.
+É necessária uma solução de observabilidade para monitorar a aplicação e a infraestrutura. O Tech Challenge trouxe um requisito de escolha entre New Relic ou Datadog.
 
 ## Discussão e possibilidades
 

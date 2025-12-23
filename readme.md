@@ -24,4 +24,4 @@ Além disso, cada arquivo contém links de navegação para os próximos conteú
 
 # Vídeo de apresentação
 
-Disponível em [Youtube]() e em [Google Drive]().
+Disponível em [Youtube](https://youtu.be/XRdOAh-GpIM) e em [Google Drive](https://drive.google.com/file/d/1CF1PVjMIU15UP162Oxl9sSY3zXbZJ8DY/view?usp=sharing).

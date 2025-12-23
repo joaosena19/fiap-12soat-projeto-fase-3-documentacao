@@ -4,7 +4,7 @@
 - **Sistema**: PostgreSQL
 - **ORM**: Entity Framework Core (API Backend) e Dapper (Lambda Functions)
 
-O motivo da escolha do banco PostgreSQL é por ser um banco relacional, que se encaixa bem com esta aplicação, já que temos diversos relacionamentos entre Cliente, Veículo, Ordem de Serviço etc. e especificamente o Postgre pois é gratuito e facilmente configurável via Docker.
+O motivo da escolha do banco PostgreSQL é por ser um banco relacional, que se encaixa bem com esta aplicação, já que temos diversos relacionamentos entre Cliente, Veículo, Ordem de Serviço etc. Especificamente o PostgreSQL foi escolhido pois é gratuito e facilmente configurável via Docker.
 
 Foi adotada uma abordagem code-first, mapeando as entidades e delegando para o Entity Framework Core a criação das tabelas, definição de campos e relacionamentos.
 
