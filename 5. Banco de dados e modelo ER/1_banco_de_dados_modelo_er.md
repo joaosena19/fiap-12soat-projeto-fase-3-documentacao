@@ -24,6 +24,8 @@ Foi adotada uma abordagem code-first, mapeando as entidades e delegando para o E
 
 Eventualmente, clientes e usuários podem estar ligados de forma fraca através da propriedade `documento_identificador`.
 
+Para mais detalhes sobre a implementação da autorização e relacionamento entre clientes e usuários, consulte: [Autorização](../7.%20Autorização/1_autorizacao.md)
+
 ### Veículos
 
 `veiculos` possuem uma ou mais `ordens_servico`, e estão associados a somente um `cliente`. 
