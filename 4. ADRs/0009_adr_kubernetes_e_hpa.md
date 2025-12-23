@@ -22,8 +22,8 @@ O HPA foi configurado da seguinte forma:
 
 Antes de definir esses valores, foi feito um cálculo simples de capacidade para garantir que o cluster aguentaria a escala máxima sem problemas:
 
-* Cada pod possui `limits` de **250m de CPU** (0.25 vCPU) e **256Mi de memória**.
-* No pior cenário, com 5 pods, o consumo total seria de **1.25 vCPU** e aproximadamente **1.3 GB de RAM**.
+* Cada pod possui `limits` de **500m de CPU** (0.5 vCPU) e **512Mi de memória**.
+* No pior cenário, com 5 pods, o consumo total seria de **2.5 vCPU** e aproximadamente **2.5 GB de RAM**.
 * O cluster utiliza instâncias `t3.small` (2 vCPUs, 2 GB de RAM), com um Node Group configurado para no mínimo 2 e no máximo 3 nós.
 
 Mesmo com o HPA no limite, a aplicação consome apenas parte da capacidade disponível. Com dois nós ativos, o cluster já oferece 4 vCPUs, o que garante margem suficiente para escalar sem gargalos.
